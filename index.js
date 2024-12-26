@@ -19,3 +19,21 @@ const swiper = new Swiper('.swiper', {
     },
   },
 });
+
+const btn = document.querySelector(".footer__content button");
+const result = document.querySelector(".toast");
+
+const getData = async () => {
+  result.style.right = 0;
+  result.innerText = "Loading....";
+  await fetch("http://127.0.0.1:1010/dispense")
+    .then((res) => res.json())
+    .then((data) => {})
+    .catch((error) => console.log(error));
+    result.innerText = "Команда выдачи отправлена";
+    setTimeout(() => {
+      result.style.right = -100 + "%";
+    }, 3000)
+};
+
+btn.addEventListener("click", getData);

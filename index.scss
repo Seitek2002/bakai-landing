@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+.toast {
+    position: fixed;
+    top: 50px;
+    right: -100%;
+    background: rgb(55, 205, 55);
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 15px;
+    border-radius: 16px;
+    transition: .3s;
+}
+
 .blur-1 {
     background: #246CF9;
     width: 320px;
