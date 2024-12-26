@@ -28,9 +28,14 @@ const getData = async () => {
   result.innerText = "Loading....";
   await fetch("http://127.0.0.1:1010/dispense")
     .then((res) => res.json())
-    .then((data) => {})
-    .catch((error) => console.log(error));
-    result.innerText = "Карта успешно выдана!";
+    .then((data) => {
+      result.innerText = "Карта успешно выдана!";
+    })
+    .catch((error) => {
+      result.style.background = "red";
+      result.innerText = "Неизвестная ошибка!";
+    });
+
     setTimeout(() => {
       result.style.right = -100 + "%";
     }, 3000)
