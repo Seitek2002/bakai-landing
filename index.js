@@ -30,7 +30,7 @@ const getData = async () => {
     .then((res) => res.json())
     .then((data) => {})
     .catch((error) => console.log(error));
-    result.innerText = "Команда выдачи отправлена";
+    result.innerText = "Карта успешно выдана!";
     setTimeout(() => {
       result.style.right = -100 + "%";
     }, 3000)
