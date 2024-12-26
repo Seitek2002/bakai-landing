@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+.blur-1 {
+  background: #246CF9;
+  width: 320px;
+  height: 320px;
+  filter: blur(480px);
+  position: absolute;
+}
+
+.blur-2 {
+  background: #246CF9;
+  width: 320px;
+  height: 320px;
+  filter: blur(480px);
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+
+.blur-3 {
+  background: #246CF9;
+  width: 320px;
+  height: 320px;
+  filter: blur(480px);
+  position: absolute;
+  right: 0;
+  top: 40%;
+}
+
+.blur-4 {
+  background: #246CF9;
+  width: 320px;
+  height: 320px;
+  filter: blur(480px);
+  position: absolute;
+  left: 0;
+  bottom: -400px;
+}
+
+.blur-5 {
+  background: #246CF9;
+  width: 320px;
+  height: 320px;
+  filter: blur(480px);
+  position: absolute;
+  left: 0;
+  bottom: -500px;
+}
+
+body {
+  background: #00182E;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  padding: 0 60px;
+  box-sizing: border-box;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.banner {
+  margin-top: 80px;
+}
+
+.banner__content {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+}
+
+.swiper {
+  text-align: center;
+}
+
+.banner h1 {
+  font-size: 50px;
+  text-align: center;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.swiper-pagination-bullet-active .progress-bar {
+  height: 100%;
+  background: #fff;
+  border-radius: 12px;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.1607843137);
+  margin: 0 6px;
+  overflow: hidden;
+  border-radius: 12px;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  width: 100px;
+}
+
+.footer__content {
+  text-align: center;
+}
+
+.footer__content button {
+  background: #0072DE;
+  color: #fff;
+  font-size: 20px;
+  padding: 36px 100px;
+  border-radius: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  margin-top: 56px;
+  max-width: 100%;
+  position: fixed;
+  left: 50%;
+  bottom: 50px;
+  transform: translateX(-50%);
+  z-index: 1;
+}/*# sourceMappingURL=index.css.map */
