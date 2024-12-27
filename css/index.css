@@ -11,60 +11,135 @@
   transition: 0.3s;
 }
 
-.blur-1 {
-  background: #246CF9;
-  width: 320px;
-  height: 320px;
-  filter: blur(480px);
+.blue-ball,
+.red-ball,
+.gift,
+.stick {
   position: absolute;
 }
 
-.blur-2 {
-  background: #246CF9;
-  width: 320px;
-  height: 320px;
-  filter: blur(480px);
-  position: absolute;
-  right: 0;
-  top: 50%;
-}
-
-.blur-3 {
-  background: #246CF9;
-  width: 320px;
-  height: 320px;
-  filter: blur(480px);
-  position: absolute;
-  right: 0;
-  top: 40%;
-}
-
-.blur-4 {
-  background: #246CF9;
-  width: 320px;
-  height: 320px;
-  filter: blur(480px);
-  position: absolute;
+.blue-ball {
+  top: 30%;
   left: 0;
-  bottom: -400px;
+  width: 50px;
 }
 
-.blur-5 {
-  background: #246CF9;
-  width: 320px;
-  height: 320px;
-  filter: blur(480px);
-  position: absolute;
+.red-ball {
+  top: 10%;
+  right: 0;
+  width: 50px;
+}
+
+.gift {
+  bottom: 20%;
   left: 0;
-  bottom: -400px;
+  width: 100px;
+}
+
+.stick {
+  width: 150px;
+  right: 0;
+  bottom: 0;
+}
+
+@keyframes levitateBlueBall {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes levitateRedBall {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+}
+@keyframes levitateGift {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+@keyframes levitateStick {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
+.blue-ball {
+  animation: levitateBlueBall 3s ease-in-out infinite;
+}
+
+.red-ball {
+  animation: levitateRedBall 4s ease-in-out infinite;
+}
+
+.gift {
+  animation: levitateGift 2.5s ease-in-out infinite;
+}
+
+.stick {
+  animation: levitateStick 3.5s ease-in-out infinite;
 }
 
 body {
-  background: #00182E;
+  background: url(../images/body-bg-2.png) no-repeat center center/cover;
   color: #fff;
   font-family: "Roboto", sans-serif;
+  position: relative;
+  overflow: hidden;
 }
 
+.header__content img {
+  max-width: 50%;
+}
+
+.snow,
+.snow:after,
+.snow::before {
+  content: "";
+  position: absolute;
+  top: -650px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: radial-gradient(4px 4px at 100px 50px, #fff, transparent), radial-gradient(6px 6px at 200px 150px, #fff, transparent), radial-gradient(3px 3px at 300px 250px, #fff, transparent), radial-gradient(4px 4px at 400px 350px, #fff, transparent), radial-gradient(6px 6px at 500px 100px, #fff, transparent), radial-gradient(3px 3px at 50px 200px, #fff, transparent), radial-gradient(4px 4px at 150px 300px, #fff, transparent), radial-gradient(6px 6px at 250px 400px, #fff, transparent), radial-gradient(3px 3px at 350px 500px, #fff, transparent), radial-gradient(4px 4px at 550px 550px, #fff, transparent);
+  background-size: 650px 650px;
+  animation: SnowAnim 3s linear infinite;
+}
+
+.snow:after {
+  margin-left: -250px;
+  opacity: 0.5;
+  filter: blur(2px);
+  animation-direction: reverse;
+  animation-duration: 6s;
+}
+
+.snow::before {
+  margin-left: -350px;
+  opacity: 0.7;
+  filter: blur(1px);
+  animation-direction: reverse;
+  animation-duration: 9s;
+}
+
+@keyframes SnowAnim {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(650px);
+  }
+}
 .container {
   padding: 0 30px;
   box-sizing: border-box;
@@ -72,19 +147,18 @@ body {
   margin: 0 auto;
 }
 
-img {
-  max-height: 100%;
-  max-width: 100%;
-}
-
 .banner {
-  margin-top: 80px;
+  margin-top: 30px;
 }
 
 .banner__content {
-  height: 60vh;
   display: flex;
   justify-content: center;
+  height: 60vh;
+}
+.banner__content img {
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .swiper {
@@ -102,34 +176,17 @@ img {
   font-size: 50px;
 }
 
-.swiper-pagination-bullet-active .progress-bar {
-  height: 100%;
-  background: #fff;
-  border-radius: 12px;
-}
-
-.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-  background: rgba(255, 255, 255, 0.1607843137);
-  margin: 0 6px;
-  overflow: hidden;
-  border-radius: 12px;
-  opacity: 1;
-}
-
-.swiper-pagination-bullet-active {
-  width: 100px;
-}
-
 .footer__content {
   text-align: center;
 }
 
 .footer__content button {
-  background: #0072DE;
-  color: #fff;
+  color: #015aeb;
+  background: #fff;
   font-size: 20px;
   padding: 36px 100px;
-  border-radius: 16px;
+  border-radius: 999999px;
+  font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
   border: none;
