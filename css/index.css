@@ -5,8 +5,8 @@
   right: -100%;
   background: rgb(55, 205, 55);
   color: #fff;
-  font-size: 12px;
-  padding: 10px 15px;
+  font-size: 36px;
+  padding: 10px 35px;
   border-radius: 16px;
   transition: 0.3s;
 }
@@ -99,8 +99,18 @@ body {
   height: 100vh;
 }
 
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .header__content img {
   max-width: 50%;
+}
+
+.header__btns {
+  display: flex;
+  gap: 32px;
 }
 
 .snow,
