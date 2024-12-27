@@ -96,6 +96,7 @@ body {
   font-family: "Roboto", sans-serif;
   position: relative;
   overflow: hidden;
+  height: 100vh;
 }
 
 .header__content img {
@@ -154,7 +155,6 @@ body {
 .banner__content {
   display: flex;
   justify-content: center;
-  height: 60vh;
 }
 .banner__content img {
   max-height: 100%;
