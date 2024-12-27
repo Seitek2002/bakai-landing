@@ -20,27 +20,27 @@
 }
 
 .blue-ball {
-  top: 30%;
+  top: 20%;
   left: 0;
-  width: 50px;
+  width: 250px;
 }
 
 .red-ball {
   top: 10%;
   right: 0;
-  width: 50px;
+  width: 150px;
 }
 
 .gift {
   bottom: 20%;
   left: 0;
-  width: 100px;
+  width: 300px;
 }
 
 .stick {
-  width: 150px;
+  width: 350px;
   right: 0;
-  bottom: 0;
+  bottom: 10%;
 }
 
 @keyframes levitateBlueBall {
@@ -185,14 +185,15 @@ body {
 }
 
 .banner h1 {
-  font-size: 40px;
+  font-size: 60px;
   text-align: center;
   font-weight: 900;
   text-transform: uppercase;
-  margin: 0;
+  margin-top: 80px;
 
   span {
-    font-size: 50px;
+    font-size: 100px;
+    display: block;
   }
 }
 
@@ -203,8 +204,8 @@ body {
 .footer__content button {
   color: #015aeb;
   background: #fff;
-  font-size: 20px;
-  padding: 36px 100px;
+  font-size: 50px;
+  padding: 36px 200px;
   border-radius: 999999px;
   font-weight: 700;
   text-transform: uppercase;
