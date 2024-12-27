@@ -43,6 +43,11 @@
   bottom: 10%;
 }
 
+.button-i,
+.button-r {
+  cursor: pointer;
+}
+
 @keyframes levitateBlueBall {
   0%,
   100% {
@@ -129,6 +134,7 @@ body {
   content: '';
   position: absolute;
   top: -650px;
+  z-index: -1;
   right: 0;
   bottom: 0;
   left: 0;
